@@ -442,11 +442,18 @@ section{
         padding-bottom: 7rem;
     }
 
+    portfolio h2{
+        margin-bottom: 3rem;
+    }
+
+    .portfolio-container{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
     .footer{
         padding: 2rem 3%;
     }
 }
-
 
 
 @media(max-width: 768px){
@@ -514,4 +521,8 @@ section{
 
 }
 
-
+@media(max-width: 617px){
+    .portfolio-container{
+        grid-template-columns: 1fr;
+    }
+}

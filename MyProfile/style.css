@@ -106,7 +106,7 @@ section{
 }
 
 @keyframes floatImage{
-    0%{
+    50%{
         transform: translateY(0);
     }
 

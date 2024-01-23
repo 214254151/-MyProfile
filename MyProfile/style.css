@@ -51,6 +51,7 @@ section{
     align-items: left;
     z-index: 100;
 }
+
 .header.sticky{
     border-bottom: .1rem solid rgba(0,0,0, .2);
 }
@@ -240,9 +241,8 @@ section{
     border-color: var(--bg-color);
     transform: scale(1.02);
     border-color:  rgb(61, 159, 184);;
-    
-
 }
+
 .skills-box i{
     font-size: 7rem;
     color: var(--main-color);
@@ -345,8 +345,8 @@ section{
     width: 5rem;
     background: var(--text-color);
     border-radius: 50%;
-
 }
+
 .portfolio-layer a i{
     font-size: 2rem;
     color: var(--second-bg-color);
@@ -442,6 +442,10 @@ section{
         padding-bottom: 7rem;
     }
 
+    .contact{
+        min-height: auto;
+    }
+
     portfolio h2{
         margin-bottom: 3rem;
     }
@@ -454,7 +458,6 @@ section{
         padding: 2rem 3%;
     }
 }
-
 
 @media(max-width: 768px){
     #menu-icon{
@@ -524,5 +527,34 @@ section{
 @media(max-width: 617px){
     .portfolio-container{
         grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width: 450px){
+    .html{
+        font-size: 50%;
+    }
+
+    .contact form .input-box input{
+        width: 100%;
+    }
+}
+
+@media(max-width: 365px){
+    .home-img img{
+        width:90vw;
+    }
+
+    .about-img img{
+        width: 90vw;
+    }
+
+    .footer{
+        flex-direction: column-reverse;
+    }
+
+    .footer p{
+        text-align: center;
+        margin-top: 2rem;
     }
 }

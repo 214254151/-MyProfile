@@ -228,6 +228,7 @@
 
 <script>
 
+// to handle the click event and toggle the "active" class
 document.addEventListener("DOMContentLoaded", function () {
     const navbarLinks = document.querySelectorAll('.navbar a');
 
@@ -266,10 +267,80 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     });
 
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+    const navbarLinks = document.querySelectorAll('.navbar a');
+    const sections = document.querySelectorAll('section');
+
+    // Function to check if an element is in the viewport
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+
+    // Function to update active link based on scroll position
+    function updateActiveLink() {
+        sections.forEach((section, index) => {
+            if (isInViewport(section)) {
+                // Remove "active" class from all links
+                navbarLinks.forEach(otherLink => otherLink.classList.remove('active'));
+                // Add "active" class to the corresponding link
+                navbarLinks[index].classList.add('active');
+            }
+        });
+    }
+
+    // Initial update when the page loads
+    updateActiveLink();
+
+    // Event listener for scroll
+    window.addEventListener('scroll', function () {
+        updateActiveLink();
+    });
+
+    // Event listener for window resize (to handle dynamic changes)
+    window.addEventListener('resize', function () {
+        updateActiveLink();
+    });
+
+    // Event listener for smooth scrolling when clicking on links
+    navbarLinks.forEach(link => {
+        link.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            const targetSectionId = link.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetSectionId);
+
+            if (targetSection) {
+                window.scrollTo({
+                    top: targetSection.offsetTop - document.querySelector('.header').offsetHeight,
+                    behavior: 'smooth'
+                });
+            }
+        });
+    });
+});
+
+
+// email.js
      type="text/javascript">
    (function(){
       emailjs.init("3gxO389M130AiZ9rs");
    })();
+// email.js
+
+
+
+
+
+
 
    //-- scroll reveal------------------ -->
 ScrollReveal({ 

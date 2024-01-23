@@ -198,7 +198,7 @@
 <section class="contact" id="contact">
     <h2 class="heading">Contact<span>Me!</span></h2>
 
-    <form action="https://formspree.io/f/xqkrayjk"method="POST">
+    <!-- <form action = "https://formspree.io/f/xkndoovl" method="POST">
         <div class="input-box">
             <input type="text"placeholder="Full Name" id="fullName">
             <input type="number"placeholder="Phone Numer"id="phoneNumber">
@@ -211,7 +211,23 @@
         <br>
         <textarea name="" id="" cols="30" row="10" placeholder="Your Mesage"id="message"></textarea>
         <input type="submit" value="Send Message" class="btn">
-        <!-- <button onclick="sendMail()">Send</button> -->
+         <button onclick="sendMail()">Send</button> 
+    </form> -->
+
+
+    <form action="https://formspree.io/f/xkndoovl" method="POST">
+        <div class="input-box">
+            <input type="text" placeholder="Full Name" id="fullName">
+            <input type="number" placeholder="Phone Number" id="phoneNumber">
+        </div>
+        <br>
+        <div class="input-box">
+            <input type="email" placeholder="Email Address" id="emailAddress">
+            <input type="text" placeholder="Email Subject" id="emailSubject">
+        </div>
+        <br>
+        <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
+        <input type="submit" value="Send Message" class="btn">
     </form>
 
 </section>

@@ -17,6 +17,7 @@
     font-family: 'Poppins', sans-serif;
 }
 
+    
 .loggo img{
     width: 100px;
     height: 50px;
@@ -58,8 +59,11 @@ section{
     justify-content: space-between;
     align-items: left;
     z-index: 100;
+    /* background-color: #1f3749; */
+    border-bottom: outset;
+    border-color: #082e303b;
+    
 }
-
 .header.sticky{
     border-bottom: .1rem solid rgba(0,0,0, .2);
 }
@@ -78,8 +82,6 @@ section{
     margin-right: 4rem; 
     transition: .3s;
     margin-top:  20px;
-   
-    
 }
 .navbar a{
     color: rgb(255, 255, 255);
@@ -96,8 +98,8 @@ section{
 
 #menu-icon{
     font-size: 3.6rem;
-    color: var(--bg-color);
-    display: none;
+    background-color: #0ef;
+    display:as;
 
 }
 
@@ -105,6 +107,7 @@ section{
     display: flex;
     justify-content: center;
     align-items: center;
+   
 }
 
 .home-img img{
@@ -132,11 +135,22 @@ section{
     font-weight: 700;
 }
 
-.home-content span{
+.home-content span {
     font-size: 6.2rem;
     color: var(--main-color);
-    animation: spin 2s linear infinite;
 }
+
+@keyframes bounce {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
+
+.home-content span{
+    animation: bounce 1.17s infinite;
+}
+
+
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -449,6 +463,8 @@ section{
         font-size: 55%;
     }
 }
+
+/* --------------------------------------------------------- */
 @media(max-width: 991px){
     .header{
         padding: 2rem 3%;
@@ -482,10 +498,68 @@ section{
     }
 }
 
+
+/* --------------------------------------------------------------- */
+input[type = "checkbox"] {
+    -webkit-appearance: none;
+    display: none;
+    visibility: hidden;
+  }
+  
+  .bar {
+    display: block;
+    position: relative;
+    cursor: pointer;
+    width: 50px;
+    height: 10px;
+    margin-top: 20px;
+  }
+  
+  .bar span {
+    position: absolute;
+    width: 25px;
+    height: 2px;
+    background: #f1faee;
+    border-radius: 100px;
+    display: inline-block;
+    transition: 0.3s ease;
+    left: 0;
+  }
+  
+  .bar span.top {
+    top: 0;
+  }
+  
+  .bar span.middle {
+    top: 17px;
+  }
+  
+  .bar span.bottom {
+    bottom: 0;
+  }
+  
+  input[type]:checked ~ span.top {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 30px;
+    left: 1px;
+  }
+  
+  input[type]:checked ~ span.bottom {
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    width: 30px;
+    bottom: -12px;
+    box-shadow: 0 0 10px #495057;
+  }
+  
+  input[type]:checked ~ span.middle {
+    transform: translateX(-20px);
+    opacity: 0;
+  }
+
+/* -------------------------------------------------------------- */
 @media(max-width: 768px){
-    #menu-icon{
-        display: block;
-    }
     .navbar{
         position: absolute;
         top: 100%;
@@ -499,7 +573,11 @@ section{
     }
 
     .navbar.active{
-        display:block;
+        display:flex;
+    }
+
+    #menu-icon {
+        display: flex; /* Show the burger icon */
     }
 
     .navbar a {
@@ -547,6 +625,7 @@ section{
 
 }
 
+/* -------------------------------------------------------------- */
 @media(max-width: 617px){
     .portfolio-container{
         grid-template-columns: 1fr;
@@ -563,6 +642,7 @@ section{
     }
 }
 
+/* ------------------------------------------------------ */
 @media(max-width: 365px){
     .home-img img{
         width:90vw;

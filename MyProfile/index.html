@@ -35,10 +35,15 @@
 
 <body>
     <header class="header">
-        <a href="#" class="logo">A/B</a>
 
+        <div class="loggo" id="logo">
+            <img src="images/logoXZ.png" alt="image">
+        </div>
+
+    
+    
         <box-icon name='menu' id="menu-icon"></box-icon>
-
+    
         <nav class="navbar">
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
@@ -46,6 +51,7 @@
             <a href="#portfolio">Portfolio</a>
             <a href="#contact">Contact</a>
         </nav>
+        
     </header>
 
     <!-------- Home screen desgin --------------->
@@ -114,7 +120,7 @@
                 <i class='bx bxs-data' ></i>
                 <h3>Backend Developer</h3>
                 <P>SQLite</P>
-                <P>Node Js</P>
+                <P>MongoDB</P>
                 <P>Java</P>
                 <P>Python</P>
                 <a href="a" class="btn">Read More</a>
@@ -137,52 +143,43 @@
 <section class="portfolio" id="portfolio">
     <h2 class="heading">Latest<span>Projects</span></h2>
     <div class="portfolio-container">
-        <div class="portfolio-box">
+
+        <div class="portfolio-box" id ="project1">
             <img src="images/bank.jpg" alt="">
             <div class="portfolio-layer">
             <h4>BankApp</h4>
-            <p>Lorem</p>
-            <a href="https://abongiile-tshopi-portfolio.netlify.app/" target=_blank><i class='bx bx-link-external' ></i></a>
-            <img src="images/bank.jpg" alt="">
+            <a href="https://65a91ca770c2520cfe61deea--transcendent-marigold-b38473.netlify.app/" target=_blank><i class='bx bx-link-external' ></i></a>
         </div>
     </div>
 
-    <!--888888888888888888888888888888888888888 -->
-    
-    <div class="details-container color-container">
+    <!-- <div class="details-container color-container">
               <h1 class="experience-sub-title project-title">Banking App</h1><br>
               <div class="btn-container">
-                <button class="btn btn-color-2 project-btn" 
-                >
-                Github
-                </button>
+                <button class="btn btn-color-2 project-btn"> Github </button>
               </div>
-    </div>
+    </div> -->
+
     <!-- 88888888888888888888888888888888888888 -->
 
     <div class="portfolio-box">
         <img src="images/financila.jpg" alt="">
         <div class="portfolio-layer">
         <h4>FinacnilApp</h4>
-        <p>Lorem, ipsum dolor spe fugit iste quoorum!</p>
         <a href="#"><i class='bx bx-link-external' ></i></a>
     </div>
 </div>
-<!-- ergdfdhdfhdf -->
 
-<!-- 77777777777 -->
 
+
+<!-- -----------Bakery---------------------------------------------------- -->
 <div class="portfolio-box">
     <a href="https://65a91ca770c2520cfe61deea--transcendent-marigold-b38473.netlify.app/" target="_blank">
         <img src="images/Bakery.jpg" alt="">
-    </a>
-    <div class="portfolio-layer">
-        <h4>Bakery Website</h4>
-        <p></p>
-       
+        <div class="portfolio-layer">
+            <h4>Bakery Website</h4>
             <i class='bx bx-link-external'></i>
-        </a>
-    </div>
+        </div>
+    </a>
 </div>
 
 </div>
@@ -369,7 +366,35 @@ ScrollReveal().reveal('.home-content, .heading', { origin: 'bottom' });
 ScrollReveal().reveal('.home-img, .skills-container, .portfolio-box, .contact form', { origin: 'top' });
 
 
-   
+ 
+     // JavaScript to handle the click event on the logo
+  document.getElementById('logo').addEventListener('click', function() {
+    // Replace the URL below with the destination URL you want to redirect to
+    window.location.href = 'https://example.com';
+  });
+
+
+  // JavaScript to handle the click event on the projects
+  document.getElementById('project1').addEventListener('click', function() {
+    // Replace the URL below with the destination URL you want to redirect to
+    window.location.href = 'https://abongiile-tshopi-portfolio.netlify.app/';
+});
+
+
+    // JavaScript to handle the click event on the projects
+  document.getElementById('logo').addEventListener('click', function() {
+    // Replace the URL below with the destination URL you want to redirect to
+    window.location.href = 'https://example.com';
+});
+
+
+    // JavaScript to handle the click event on the projects
+  document.getElementById('logo').addEventListener('click', function() {
+    // Replace the URL below with the destination URL you want to redirect to
+    window.location.href = 'https://example.com';
+
+  });
+  
 </script>
     
 </body>

@@ -17,6 +17,14 @@
     font-family: 'Poppins', sans-serif;
 }
 
+.loggo img{
+    width: 100px;
+    height: 50px;
+    text-align: center;
+    line-height: 100px;
+    cursor: pointer; 
+  }
+
 /* body text colored white */
 :root{
     --bg-color:#1f242d;
@@ -69,13 +77,12 @@ section{
     color: var(--text-color); 
     margin-right: 4rem; 
     transition: .3s;
+    margin-top:  20px;
+   
     
 }
 .navbar a{
     color: rgb(255, 255, 255);
-}
-
-.navbar a {
     margin-right: 1.5rem;
 }
 

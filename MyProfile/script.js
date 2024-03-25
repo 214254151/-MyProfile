@@ -97,3 +97,7 @@ function generateCube() {
 myIcon.classList.add('fas', 'fa-home'); // Add classes to specify the icon ('fas' for regular style, 'fa-home' for the home icon)
 document.body.appendChild(myIcon); // Append the icon to the body or any other desired element
 
+
+
+       
+  

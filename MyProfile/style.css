@@ -214,6 +214,40 @@ section{
 }
 
 /* --------------------------About design------------------------- */
+
+/* ----------------------------------------------spinner */
+/* Style for the cube container */
+.stage-cube-cont {
+    perspective: 1000px; /* Perspective for 3D effect */
+    margin: 50px auto; /* Adjust margin as needed */
+  }
+  
+  /* Style for the cube spinner */
+  .cube-spinner {
+    width: 200px; /* Adjust cube size as needed */
+    height: 200px; /* Adjust cube size as needed */
+    position: relative;
+    transform-style: preserve-3d; /* Preserve 3D transformations */
+    animation: spin 10s infinite linear; /* Rotate the cube infinitely */
+  }
+  
+  /* Style for each face of the cube */
+  .cube-spinner > div {
+    position: absolute;
+    width: 200px; /* Adjust face size as needed */
+    height: 200px; /* Adjust face size as needed */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Keyframes for cube rotation */
+  @keyframes spin {
+    from { transform: rotateX(0deg) rotateY(0deg); }
+    to { transform: rotateX(360deg) rotateY(360deg); }
+  }
+  
+/* ---------------------------- */
 .about{
     display: flex;
     justify-content: center;

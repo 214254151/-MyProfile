@@ -59,10 +59,8 @@ section{
     justify-content: space-between;
     align-items: left;
     z-index: 100;
-    /* background-color: #1f3749; */
     border-bottom: outset;
     border-color: #082e303b;
-    
 }
 .header.sticky{
     border-bottom: .1rem solid rgba(0,0,0, .2);
@@ -618,9 +616,8 @@ input[type = "checkbox"] {
     .navbar{
         display: grid;
         transition-duration: 0.2s;
-        background-color: rgba(28, 65, 69, 0.436);
+        background-color: rgba(28, 65, 69, 0.822);
         width: 110px;
-
     }
 
     .navbar.active{

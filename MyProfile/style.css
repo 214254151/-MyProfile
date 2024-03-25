@@ -612,7 +612,15 @@ input[type = "checkbox"] {
         display: none;
     }
     .bar{
-        display: block;
+        display: block; 
+    }
+
+    .navbar{
+        display: grid;
+        transition-duration: 0.2s;
+        background-color: rgba(28, 65, 69, 0.436);
+        width: 110px;
+
     }
 
     .navbar.active{

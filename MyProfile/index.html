@@ -25,6 +25,7 @@
     <script type="text/javascript"
         src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
 </script>
+
 <script type="text/javascript">
    (function(){
       emailjs.init("3gxO389M130AiZ9rs");
@@ -60,6 +61,11 @@
 
     <!-------- Home screen desgin --------------->
     
+    <div class="bar" id="menu-icon">
+        <!-- Your bar icon here -->
+        <button onclick="toggleNavbar()">Toggle Navbar</button>
+    </div>
+
     <section class="home" id="home">
         <div class="home-content">
             <h3>Hello, It's me</h3>
@@ -156,7 +162,8 @@
                 <P>MongoDB</P>
                 <P>Java</P>
                 <P>Python</P>
-                <a href="a" class="btn">Read More</a>
+                <!-- <a href="a" class="btn">Read More</a> -->
+                <a href="#" class="btn" onclick="openWindow('https://example.com/frontend-details')">Read More</a>
             </div>
 
             <!-- ----------------------deisgn -------------->
@@ -181,7 +188,9 @@
             <img src="images/bank.jpg" alt="">
             <div class="portfolio-layer">
             <h4>BankApp</h4>
-            <a href="https://mtn.com" target=_blank><i class='bx bx-link-external' ></i></a>
+            <!-- <a href="https://mtn.com" target=_blank><i class='bx bx-link-external' ></i></a> -->
+            <a href="#" class="btn" onclick="openWindow('https://https://mtn.com')">
+                Read More</a>
         </div>
     </div>
 
@@ -414,6 +423,7 @@ ScrollReveal().reveal('.home-img, .skills-container, .portfolio-box, .contact fo
   document.getElementById('project1').addEventListener('click', function() {
     // Replace the URL below with the destination URL you want to redirect to
     window.location.href = 'https://mtn.com';
+    
 });
 
   document.getElementById('project2').addEventListener('click', function() {
@@ -429,6 +439,13 @@ ScrollReveal().reveal('.home-img, .skills-container, .portfolio-box, .contact fo
 
 
 
+
+//   --------------bar when clicked
+
+// ---------------skill  buttons
+function openWindow(url) {
+        window.open(url, '_blank');
+    }
 
 </script>
     

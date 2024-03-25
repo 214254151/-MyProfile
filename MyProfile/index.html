@@ -33,7 +33,8 @@
     <header class="header">
 
         <div class="loggo" id="logo">
-            <img src="images/logoXZ.png" alt="image">
+            <a href="index.html" class="logo-link">
+                <img src="images/logoXZ.png" alt="image"></a>
         </div>
     
         <nav class="navbar">
@@ -44,17 +45,14 @@
             <a href="#contact">Contact</a>
         </nav>
 
+        
         <label class="bar" for="check">
             <input type="checkbox" id="check">
-        
             <span class="top"></span>
             <span class="middle"></span>
             <span class="bottom"></span> 
         </label>
 
-    
-
-        
     </header>
 
     <!-------- Home screen desgin --------------->
@@ -68,6 +66,7 @@
             </p>
         
             <div class="social-media">
+                
                 <a href="#"><i class='bx bxl-facebook' ></i></a>
                 <a href="#"><i class='bx bxl-twitter' ></i></a>
                 <a href="#"><i class='bx bxl-instagram-alt' ></i></a>
@@ -98,8 +97,36 @@
                 I'm a full-stack developer. I have learnt HTML, CSS, JS, Angular, Python and Java. 
                 I am interested in working on projects like Social media Dashboard, Game Development, Eocommerce Websites, ChatApp and more.</p>
 
-                <span>-----------------------------------------------------------------------------------------------------------------------------------------------------------</span>
         </div>
+
+        <div className="stage-cube-cont">
+            <div className="cube-spinner">
+              <div className="face0">
+                <FontAwesomeIcon icon={faAngular} color="#DD0031"/>
+              </div>
+  
+              <div className="face1">
+                <FontAwesomeIcon icon={faReact} color="#5ED4F4"/>
+              </div>
+  
+              <div className="face2">
+                <FontAwesomeIcon icon={faHtml5} color="#F06519"/>
+              </div>
+  
+              <div className="face3">
+                <FontAwesomeIcon icon={faCss3} color="#28A4D9"/>
+              </div>
+  
+              <div className="face4">
+                <FontAwesomeIcon icon={faGit} color="#EFD81D"/>
+              </div>
+  
+              <div className="face5">
+                <FontAwesomeIcon icon={faJsSquare} color="#ff7262"/>
+              </div>
+            </div>
+          </div>
+
     </section>
 
     <!-- -----------------------Skills section--------------------------------- -->
@@ -371,10 +398,10 @@ ScrollReveal().reveal('.home-img, .skills-container, .portfolio-box, .contact fo
 
  
      // JavaScript to handle the click event on the logo----------------------------------------------------------------
-  document.getElementById('logo').addEventListener('click', function() {
-    // Replace the URL below with the destination URL you want to redirect to
-    window.location.href = 'https://example.com';
-  });
+//   document.getElementById('logo').addEventListener('click', function() {
+//     // Replace the URL below with the destination URL you want to redirect to
+//     window.location.href = 'https://man.com';
+//   });
 
 
 
@@ -396,7 +423,60 @@ ScrollReveal().reveal('.home-img, .skills-container, .portfolio-box, .contact fo
     window.location.href = 'https://telkom.com';
 
   });
+
+
+
+
+
+//   ----------------------------------------------------------------------------------------------------------------
   
+
+// Create a function to generate and append the cube
+function generateCube() {
+  // Create container div
+  const stageCubeCont = document.createElement('div');
+  stageCubeCont.className = 'stage-cube-cont';
+
+  // Create cube spinner div
+  const cubeSpinner = document.createElement('div');
+  cubeSpinner.className = 'cube-spinner';
+
+  // Define icon names
+  const iconNames = ['faAngular', 'faReact', 'faHtml5', 'faCss3', 'faGit', 'faJsSquare'];
+  // Define colors
+  const colors = ['#DD0031', '#5ED4F4', '#F06519', '#28A4D9', '#EFD81D', '#ff7262'];
+
+  // Loop through iconNames array to create faces
+  for (let i = 0; i < iconNames.length; i++) {
+    // Create face div
+    const face = document.createElement('div');
+    face.className = 'face' + i;
+
+    // Create FontAwesome icon element
+    const icon = document.createElement('i');
+    icon.className = 'fas ' + iconNames[i];
+    icon.style.color = colors[i]; // Set color
+
+    // Append icon to face div
+    face.appendChild(icon);
+
+    // Append face to cube spinner div
+    cubeSpinner.appendChild(face);
+  }
+
+  // Append cube spinner to stage cube container
+  stageCubeCont.appendChild(cubeSpinner);
+
+  // Append stage cube container to the body
+  document.body.appendChild(stageCubeCont);
+}
+
+// Call the function to generate and append the cube
+generateCube();
+
+ 
+//   ----------------------------------------------------------------------------------------------------------------
+   
 </script>
     
 </body>

@@ -1,6 +1,12 @@
+
 {
+  "name": "your-project-name",
+  "version": "1.0.0",
   "dependencies": {
     "@emailjs/browser": "^3.12.1",
     "@fortawesome/fontawesome-free": "^6.5.1"
+  },
+  "scripts": {
+    "build": "your-build-command-here"
   }
 }

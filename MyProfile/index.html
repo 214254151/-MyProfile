@@ -240,23 +240,6 @@
 <section class="contact" id="contact">
     <h2 class="heading">Contact<span>Me!</span></h2>
 
-    <!-- <form action = "https://formspree.io/f/xkndoovl" method="POST">
-        <div class="input-box">
-            <input type="text"placeholder="Full Name" id="fullName">
-            <input type="number"placeholder="Phone Numer"id="phoneNumber">
-        </div>
-        <br>
-        <div class="input-box">
-            <input type="email"placeholder="Email Address"id="emailAddress">
-            <input type="text"placeholder="Email Suject"id="emailSubject">
-        </div>
-        <br>
-        <textarea name="" id="" cols="30" row="10" placeholder="Your Mesage"id="message"></textarea>
-        <input type="submit" value="Send Message" class="btn">
-         <button onclick="sendMail()">Send</button> 
-    </form> -->
-
-
     <form action="https://formspree.io/f/xkndoovl" method="POST">
         <div class="input-box">
             <input type="text" placeholder="Full Name" id="fullName">
@@ -464,9 +447,32 @@ function openWindow(url) {
         window.open(url, '_blank');
     }
 
-   
-        
 </script>
+
+
+<!-- -----------------------------------script for firebse ------------------->
+<script type="module">
+    // Import the functions you need from the SDKs you need
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyChUtaOutLGYa_50JTHcupHLOlFBSAWOFU",
+      authDomain: "my-portfolio-0-70847.firebaseapp.com",
+      projectId: "my-portfolio-0-70847",
+      storageBucket: "my-portfolio-0-70847.appspot.com",
+      messagingSenderId: "473207605003",
+      appId: "1:473207605003:web:789120c8afa705fb35440e"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
+  </script>
+<!-- -----------------------------------script for firebase ------------------>
+
+
     
 </body>
 <!-- ----------- Footer -------------->

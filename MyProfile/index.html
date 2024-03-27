@@ -22,15 +22,15 @@
     <!-- Skills arrow pointer -->
     <title>Arrow Pointer</title>
 
-    <script type="text/javascript"
-        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
-</script>
-
-<script type="text/javascript">
-   (function(){
-      emailjs.init("3gxO389M130AiZ9rs");
-   })();
-</script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            emailjs.init({
+                publicKey: "YOUR_PUBLIC_KEY",
+            });
+        })();
+    </script>
 </head>
 
 <body>
@@ -42,6 +42,7 @@
         </div>
     
         <nav class="navbar">
+            <a href="index.html" class="active"></a>
             <a href="#home" class="active">Home</a>
             <a href="#about">About</a>
             <a href="#skills">Skills</a>
@@ -252,7 +253,9 @@
         </div>
         <br>
         <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message"></textarea>
-        <input type="submit" value="Send Message" class="btn">
+        <!-- <button onclick="sendtMail()" value="Send Message" class="btn"> -->
+        <button onclick="sendMail()"  class="btn">Send Message</button>
+        </button>
     </form>
 
 </section>
@@ -447,6 +450,31 @@ function openWindow(url) {
         window.open(url, '_blank');
     }
 
+
+
+
+</script>
+
+<script>
+    // --------send emailJS
+
+function sendMail() {
+    var params = {
+        from_name: document.getElementById("fullName").ariaValueMax,
+        email_subject: document.getElementById("emailSubject").value,
+        message: document.getElementById("message").value,
+        phone_number: document.getElementById("phoneNumber").value
+    }
+
+    email.send("service_vknesoz, template_a9vmwra", params).then(function (res) {
+        alert("Success!" + res.status);
+    })
+
+        .catch(function (err) {
+            console.log(err);
+            alert("Error!");
+        });
+}
 </script>
 
 

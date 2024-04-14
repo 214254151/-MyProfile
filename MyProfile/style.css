@@ -387,14 +387,18 @@ section {
 
 /* ---------------------------- */
 .about {
+    margin-left: -5%;
+    margin-bottom: 15%;
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     background: var(--second-bg-color);
+    height: 100vh;
 }
 
 .about-img img {
+    
     width: 29vw;
     height: 32vw;
     border-radius: 75%;
@@ -430,7 +434,13 @@ section {
     margin: 2rem 0 3rem;
 }
 
-/* ---------------- */
+.about-content {
+    margin-top: -20%;
+    max-width: 800px; /* Adjust the max-width as needed */
+    /* margin-bottom: 20px; */
+}
+
+/* -------icons--------- */
 .fa-java {
 
     font-size: 80px;
@@ -477,6 +487,55 @@ section {
 .fa-database {
     font-size: 80px;
 }
+
+
+
+/* .about {
+    position: bottom;
+    overflow: hidden;
+} */
+
+.icons-container {
+    position: absolute;
+    /* top: 50%; */
+    display: flex;
+    animation: slideToRight 4.8s linear infinite;
+}
+
+.icons-container i {
+    margin-right: 20px;
+    /* visibility: hidden; */
+}
+
+/* @keyframes slideToRight {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(100%);
+    }
+} */
+
+@keyframes slideToRight {
+    10% {
+        transform: translateX(0);
+    }
+    10% {
+        transform: translateX(100%);
+    }
+    10% {
+        transform: translateX(10%);
+    }
+    20% {
+        transform: translateX(10%);
+        visibility: visible;
+    }
+    20% {
+        transform: translateX(10);
+        visibility: visible;
+    }
+}
+
 
 
 

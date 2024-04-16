@@ -74,9 +74,22 @@
 
     
 
+        
     <!-- ----------- -->
 
     <section class="home" id="home">
+
+
+<!-- -------------Loader -->
+<section class="dots-container">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+  </section>
+
+
         <div class="home-content">
             <h3>Hello, It's me</h3>
             <h1>Abongile Tshopi</h1>
@@ -528,6 +541,26 @@ function sendMail() {
     const app = initializeApp(firebaseConfig);
   </script>
 <!-- -----------------------------------script for firebase ------------------>
+
+
+
+<!-- --------------loaderss------------- -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+    // Show the loader when the DOM content is loaded
+    var loader = document.querySelector('.dots-container');
+    loader.classList.add('loading');
+});
+
+// Simulate the delay of content loading
+window.addEventListener("load", function() {
+    // After a certain delay, hide the loader
+    var loader = document.querySelector('.dots-container');
+    setTimeout(function() {
+        loader.classList.remove('loading');
+    }, 2000); // Adjust the delay time (in milliseconds) as needed
+});
+</script>
 
 
     

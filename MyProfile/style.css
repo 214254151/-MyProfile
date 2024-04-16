@@ -382,13 +382,73 @@ section {
     box-shadow: none;
 }
 
+/* ---------loaderrrrrrrr----------- */
+.dots-container {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    transform: translate(-50%, -50%);
+  }
+  
+  .dot {
+    height: 20px;
+    width: 20px;
+    margin-right: 10px;
+    border-radius: 10px;
+    background-color: #b3d4fc;
+    animation: pulse 1.5s infinite ease-in-out;
+  }
+  
+  .dot:last-child {
+    margin-right: 0;
+  }
+  
+  .dot:nth-child(1) {
+    animation-delay: -0.3s;
+  }
+  
+  .dot:nth-child(2) {
+    animation-delay: -0.1s;
+  }
+  
+  .dot:nth-child(3) {
+    animation-delay: 0.1s;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.8);
+      background-color: #b3d4fc;
+      box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+    }
+  
+    50% {
+      transform: scale(1.2);
+      background-color: #6793fb;
+      box-shadow: 0 0 0 10px rgba(178, 212, 252, 0);
+    }
+  
+    100% {
+      transform: scale(0.8);
+      background-color: #b3d4fc;
+      box-shadow: 0 0 0 0 rgba(178, 212, 252, 0.7);
+    }
+  }
+
+  .loading {
+    display: flex;
+}
+
+
 /* --------------------------About design------------------------- */
 
 
 /* ---------------------------- */
 .about {
     margin-left: -5%;
-    margin-bottom: 15%;
+    /* margin-bottom: 10%; */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -400,7 +460,7 @@ section {
 .about-img img {
     
     width: 29vw;
-    height: 32vw;
+    height: 29vw;
     border-radius: 75%;
     transition-duration: 0ms;
     transform: matrix(12%);
@@ -443,49 +503,49 @@ section {
 /* -------icons--------- */
 .fa-java {
 
-    font-size: 80px;
+    font-size: 60px;
 }
 
 .fa-html5 {
 
-    font-size: 80px;
+    font-size: 60px;
 }
 
 .fa-css3-alt {
 
-    font-size: 80px;
+    font-size: 60px;
 
 }
 
 .fa-js {
-    font-size: 80px;
+    font-size: 60px;
 }
 
 .fa-git {
-    font-size: 80px;
+    font-size: 60px;
 }
 
 .fa-react {
 
-    font-size: 80px;
+    font-size: 60px;
 
 }
 
 .fa-node-js {
 
-    font-size: 80px;
+    font-size: 60px;
 }
 
 .fa-figma {
-    font-size: 80px;
+    font-size: 60px;
 }
 
 .fa-python {
-    font-size: 80px;
+    font-size: 60px;
 }
 
 .fa-database {
-    font-size: 80px;
+    font-size: 60px;
 }
 
 

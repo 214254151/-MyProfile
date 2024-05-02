@@ -557,15 +557,28 @@ section {
 
 .icons-container {
     position: absolute;
-    /* top: 50%; */
     display: flex;
     animation: slideToRight 4.8s linear infinite;
+    
 }
 
 .icons-container i {
     margin-right: 20px;
-    /* visibility: hidden; */
 }
+
+.icons-container i:hover {
+    transform: scale(2);
+    animation-duration: 0.5s;
+    transition-duration: 0.2s;
+}
+
+/* Hide the media controls */
+audio
+ {
+    display: none;
+}
+
+
 
 /* @keyframes slideToRight {
     0% {
@@ -623,15 +636,15 @@ section {
     padding: 3rem 2rem 4rem;
     border-radius: 1rem;
     text-align: center;
-    border: 2rem solid var(--second-bg-color);
+    border: 0.5rem solid var(--second-bg-color);
     transform: .5s ease;
+    transition: all .4s ease;
 }
 
 .skills-container .skills-box:hover {
     border-color: var(--bg-color);
-    transform: scale(1.02);
-    border-color: rgb(61, 159, 184);
-    ;
+    transform: scale(1.04);
+    border-color: rgb(61, 159, 184); 
 }
 
 .skills-box i {

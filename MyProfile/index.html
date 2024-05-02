@@ -23,10 +23,6 @@
     <!-- Skills arrow pointer -->
     <title>Arrow Pointer</title>
 
-
-    
-
-
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
     </script>
     <script type="text/javascript">
@@ -36,7 +32,9 @@
             });
         })();
     </script>
+
 </head>
+
 
 <body>
     <header class="header">
@@ -73,22 +71,9 @@
     </div>
 
     
-
-        
     <!-- ----------- -->
 
     <section class="home" id="home">
-
-
-<!-- -------------Loader -->
-<section class="dots-container">
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-    <div class="dot"></div>
-  </section>
-
 
         <div class="home-content">
             <h3>Hello, It's me</h3>
@@ -119,18 +104,19 @@
         </div>
 
         <div class="backgroundAnim">
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
-            <span></span>
+            <span><i class="fa-brands fa-figma fa-fade" style="color: #ffae00;"></i></span>
+            <span><i class="fa-brands fa-html5 fa-fade" style="color: #ffeb3b;"></i></span>
+            <span><i class="fa-brands fa-css3-alt fa-fade"></i></span>
+            <span><i class="fa-brands fa-js fa-fade" style="color: #74C0FC;"></i></span>
+            <span><i class="fa-brands fa-git fa-fade"></i></span>
+            <span><i class="fa-brands fa-react fa-fade" style="color: #74C0FC;"></i></span>
+            <span><i class="fa-brands fa-java fa-fade" style="color: #B197FC;"></i></span>
+            <span><i class="fa-brands fa-mongodb" style="color: #00ff00;"></i></span>
+            <span><i class="fa-brands fa-python fa-fade"></i></span>
+            <span><i class="fa-solid fa-database fa-fade" style="color: #ff001e;"></i></span>
+           
         </div>
-
+      
         <div class="banner">
             <div class="contennt">
                 <h2>
@@ -152,13 +138,13 @@
         
         
         <div class="about-content">
-            <h2 class="heading">About<span>Me</span></h2>
+            <h2 class="heading">About<span>Me</span></h2><br><br>
             <h3>Full-Stack Developer</h3>
             <p>I'm a passionate software developer individual who is dedicated to improving skills through hands-on learning and development work.
                 I am flexible and can adapt easily when required to work on multiple projects or tasks.
                 I always set high standards for myself.</p>
 
-                <h4>My interests <span>and hobbies</span></h4>
+                <h3>My interests <span>and hobbies</span></h3>
                 
                 <p>
                     I am interested in learning about how patterns works,<br />
@@ -179,6 +165,11 @@
                     <i class="fa-brands fa-python fa-fade"></i>
                     <i class="fa-solid fa-database fa-fade" style="color: #ff001e;"></i>
                 </div>
+
+                <audio controls id="hoverSound">
+                    <source src="Sound/SFX.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
 
         </div>
 
@@ -241,14 +232,6 @@
         </div>
     </div>
 
-    <!-- <div class="details-container color-container">
-              <h1 class="experience-sub-title project-title">Banking App</h1><br>
-              <div class="btn-container">
-                <button class="btn btn-color-2 project-btn"> Github </button>
-              </div>
-    </div> -->
-
-    <!-- 88888888888888888888888888888888888888 -->
 
     <div class="portfolio-box" id="project2">
         <img src="images/financila.jpg" alt="">
@@ -301,8 +284,6 @@
     </form>
 
 </section>
-
-
        
 <!-- scroll reveal------------------ -->
 
@@ -520,27 +501,16 @@ function sendMail() {
 </script>
 
 
-<!-- -----------------------------------script for firebse ------------------->
-<script type="module">
-    // Import the functions you need from the SDKs you need
-    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.9.0/firebase-app.js";
-    // TODO: Add SDKs for Firebase products that you want to use
-    // https://firebase.google.com/docs/web/setup#available-libraries
-  
-    // Your web app's Firebase configuration
-    const firebaseConfig = {
-      apiKey: "AIzaSyChUtaOutLGYa_50JTHcupHLOlFBSAWOFU",
-      authDomain: "my-portfolio-0-70847.firebaseapp.com",
-      projectId: "my-portfolio-0-70847",
-      storageBucket: "my-portfolio-0-70847.appspot.com",
-      messagingSenderId: "473207605003",
-      appId: "1:473207605003:web:789120c8afa705fb35440e"
-    };
-  
-    // Initialize Firebase
-    const app = initializeApp(firebaseConfig);
-  </script>
-<!-- -----------------------------------script for firebase ------------------>
+<!-- -----------------------------------play SFX ------------------->
+<script>
+    document.querySelectorAll('.icons-container i').forEach(function(icon) {
+        icon.addEventListener('mouseover', function() {
+            var hoverSound = document.getElementById('hoverSound');
+            hoverSound.play();
+        });
+    });
+</script>
+
 
 
 

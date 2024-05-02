@@ -457,19 +457,47 @@ section {
     height: 100vh;
 }
 
+.about-img{
+    margin-top: -50%;
+    height: auto;
+}
 .about-img img {
     
     width: 29vw;
     height: 29vw;
-    border-radius: 75%;
+    border-radius: 50%;
     transition-duration: 0ms;
     transform: matrix(12%);
+    border-style:outset;
+    border-width: 1ch;
+    position: relative;
+    
+    
 }
 
 .about-img img:hover {
-    border-color: var(--first-color-alt);
-    transform: scale(1.02);
+    border-color: #0ef;
+    transform: scale(0.2s);
+    transform: scale(1.1);
+    animation-duration: 0.5s;
+    transition-duration: 0.2s;
+    
+    animation: spin 6s linear infinite;
+
 }
+
+
+
+
+@keyframes spin {
+    from {
+        transform: rotate(90deg); /* Start rotation from 0 degrees */
+    }
+    to {
+        transform: rotate(360deg); /* End rotation at 360 degrees (one full circle) */
+    }
+}
+
 
 .heading {
     text-align: center;

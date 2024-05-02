@@ -93,6 +93,7 @@
            
             <a href="pdf/ABONGILE TSHOPI'S RESUMEE.pdf" class="btn">Download CV</a>
             
+            
                 <!-- <a download="" href="assets/pdf/Abngile UP Resume-1.pdf" class="button button--flex">
                     Download CV <i class="uil uil-download-alt button__icon"></i>
                 </a>
@@ -178,44 +179,63 @@
 
     <!-- -----------------------Skills section--------------------------------- -->
     <section class="skills" id="skills">
-        <h2 class="heading">My<span>Skills</span></h2>
+        <h2 class="heading">My <span>Skills</span></h2>
         <div class="skills-container">
-
-            <!------------------- Frontend developer ----------->
             <div class="skills-box">
                 <i class='bx bx-code-alt'></i>
                 <h3>Frontend Developer</h3>
-                <P>HTML & CSS</P> 
-                <P>JavaSCript</P> 
-                <P>React</P> 
-                <P>Angular</P> 
-                <a href="a" class="btn">Read More</a>
+                <p>HTML & CSS</p>
+                <p>JavaScript</p>
+                <p>React</p>
+                <p>Angular</p>
+                <a href="#" class="btn" onclick="toggleInfo(event)">Read More</a>
+                <div class="info" style="display: none;">
+                    <p>This is additional information about frontend development.</p>
+                    <p>Feel free to explore more about frontend technologies!</p>
+                </div>
             </div>
+            
+    <script>
+        function toggleInfo(event) {
+    event.preventDefault();
+    const infoDiv = event.target.nextElementSibling;
+    infoDiv.style.display = infoDiv.style.display === 'none' ? 'block' : 'none';
+}
 
-            <!-- ----------------Backend developer section ------>
+    </script>
+
+    
             <div class="skills-box">
-                <i class='bx bxs-data' ></i>
+                <i class='bx bxs-data'></i>
                 <h3>Backend Developer</h3>
-                <P>SQLite</P>
-                <P>MongoDB</P>
-                <P>Java</P>
-                <P>Python</P>
-                <!-- <a href="a" class="btn">Read More</a> -->
-                <a href="#" class="btn" onclick="openWindow('https://example.com/frontend-details')">Read More</a>
+                <p>SQLite</p>
+                <p>MongoDB</p>
+                <p>Java</p>
+                <p>Python</p>
+                <a href="#" class="btn" onclick="toggleInfo(event)">Read More</a>
+                <div class="info" style="display: none;">
+                    <p>This is additional information about frontend development.</p>
+                    <p>Feel free to explore more about frontend technologies!</p>
+                </div>
+                <!-- <a href="#" class="btn" onclick="openWindow('https://example.com/backend-details')">Read More</a> -->
             </div>
-
-            <!-- ----------------------deisgn -------------->
+    
             <div class="skills-box">
                 <i class='bx bxl-sketch'></i>
                 <h3>Designer</h3>
-                <P>Adobe Pack</P>
-                <P>MarvelApp</P>
-                <P>Balsamiq & Figma</P>
-                <P>Licidchart & SmartDraw</P>
-                <a href="a" class="btn">Read More</a>
+                <p>Adobe Pack</p>
+                <p>MarvelApp</p>
+                <p>Balsamiq & Figma</p>
+                <p>Licidchart & SmartDraw</p>
+                <a href="#" class="btn" onclick="toggleInfo(event)">Read More</a>
+                <div class="info" style="display: none;">
+                    <p>This is additional information about frontend development.</p>
+                    <p>Feel free to explore more about frontend technologies!</p>
+                </div>
             </div>
         </div>
     </section>
+    
 
 <!------------------ -------------Portfolio section------------ -->
 <section class="portfolio" id="portfolio">
@@ -433,6 +453,7 @@ ScrollReveal().reveal('.home-img, .skills-container, .portfolio-box, .contact fo
 document.getElementById('lnkd').addEventListener('click', function() {
     // Replace the URL below with the destination URL you want to redirect to
     window.location.href = 'https://www.linkedin.com/in/abongile-tshopi-05b594169/';
+    
     
 });
 

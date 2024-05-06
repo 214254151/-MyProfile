@@ -448,13 +448,16 @@ section {
 /* ---------------------------- */
 .about {
     margin-left: -5%;
-    /* margin-bottom: 10%; */
+    /* margin-top: -12%; */
+    
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 2rem;
     background: var(--second-bg-color);
     height: 100vh;
+    
+
 }
 
 .about-img{
@@ -481,8 +484,12 @@ section {
     transform: scale(1.1);
     animation-duration: 0.5s;
     transition-duration: 0.2s;
-    
     animation: spin 6s linear infinite;
+
+}
+
+#about{
+    height: max-content;
 
 }
 

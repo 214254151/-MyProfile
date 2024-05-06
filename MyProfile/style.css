@@ -1053,13 +1053,32 @@ input[type="checkbox"]:checked~.navbar {
 
     .about {
         flex-direction: column-reverse;
+
+        .about-img {
+            width: 70vw;
+            margin-top: -450px;
+            margin-left: 200px;;
+        }
+
+        .about h2 {
+            margin-bottom: 3rem;
+        }
+
+       .heading{
+            margin-right: 50%;
+            margin-top: 20%;
+            margin-left: 30%;
+        }
+        
+       
+
+        }
+        
+
+
     }
 
-    .about-img {
-        width: 70vw;
-        margin-top: -450px;
-        margin-left: 200px;;
-    }
+    
 
     /* .about-content .heading{
        

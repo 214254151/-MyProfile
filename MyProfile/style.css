@@ -1057,8 +1057,15 @@ input[type="checkbox"]:checked~.navbar {
 
     .about-img {
         width: 70vw;
-        margin-top: 4rem;
+        margin-top: -450px;
+        margin-left: 200px;;
     }
+
+    /* .about-content .heading{
+       
+            margin-right: -90px;
+        
+    } */
 
     .skills h2 {
         margin-bottom: 3rem;

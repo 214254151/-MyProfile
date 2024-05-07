@@ -261,7 +261,6 @@ section {
 #menu-icon {
     font-size: 3.6rem;
     background-color: #0ef;
-    display: as;
 
 }
 
@@ -1098,7 +1097,7 @@ input[type="checkbox"]:checked~.navbar {
         grid-template-columns: repeat(2, 1fr);
     }
 
-}
+
 
 /* -------------------------------------------------------------- */
 @media(max-width: 617px) {
@@ -1227,3 +1226,5 @@ input[type="checkbox"]:checked~.navbar {
         transform: rotateX(90deg);
     }
 }
+
+

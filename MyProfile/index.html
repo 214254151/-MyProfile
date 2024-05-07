@@ -196,10 +196,12 @@
                 <p>JavaScript</p>
                 <p>React</p>
                 <p>Angular</p>
-                <a href="#" class="btn" onclick="toggleInfo(event)">Read More</a>
+                <a href="#" class="btn" onclick="toggleInfo(event)">More/Hide</a>
                 <div class="info" style="display: none;">
-                    <p>This is additional information about frontend development.</p>
-                    <p>Feel free to explore more about frontend technologies!</p>
+                    <p> <h4> As a frontend developer, I create user-facing website elements using HTML, CSS, and
+                         JavaScript to ensure functionality and visual appeal. 
+                         I collaborate with designers and backend developers to
+                          ensure seamless website performance across devices and browsers.</h4></p>
                 </div>
             </div>
             
@@ -220,10 +222,14 @@
                 <p>MongoDB</p>
                 <p>Java</p>
                 <p>Python</p>
-                <a href="#" class="btn" onclick="toggleInfo(event)">Read More</a>
+                <a href="#" class="btn" onclick="toggleInfo(event)">More/Hide</a>
                 <div class="info" style="display: none;">
-                    <p>This is additional information about frontend development.</p>
-                    <p>Feel free to explore more about frontend technologies!</p>
+                    <p>
+                        <h4> As a backend developer, I handle the behind-the-scenes functionality of websites, 
+                            managing servers, databases, and application logic. Using languages like Java, Python, and 
+                            databases such as MySQL or MongoDB, I create dynamic web applications. My role involves securely managing user data, processing frontend requests, and 
+                            ensuring smooth website functionality</h4>.</p>
+                    
                 </div>
                 <!-- <a href="#" class="btn" onclick="openWindow('https://example.com/backend-details')">Read More</a> -->
             </div>
@@ -235,10 +241,11 @@
                 <p>MarvelApp</p>
                 <p>Balsamiq & Figma</p>
                 <p>Licidchart & SmartDraw</p>
-                <a href="#" class="btn" onclick="toggleInfo(event)">Read More</a>
+                <a href="#" class="btn" onclick="toggleInfo(event)">More/Hide</a>
                 <div class="info" style="display: none;">
-                    <p>This is additional information about frontend development.</p>
-                    <p>Feel free to explore more about frontend technologies!</p>
+                    <p><h4>As a designer developer I focuse on crafting attractive and user-friendly interfaces for websites and apps. 
+                        Using tools like Adobe Suite Marvel App and Figma, I create layouts and graphics that enhance user experience. 
+                        I collaborate with frontend developers to ensure seamless integration and deliver engaging digital experiences.</h4></p>
                 </div>
             </div>
         </div>
@@ -291,10 +298,11 @@
 </section>
 
 <!-- -----------Contact me page -------------->
+<!-- -----------Contact me page -------------->
 <section class="contact" id="contact">
     <h2 class="heading">Contact<span>Me!</span></h2>
 
-    <form action="https://formspree.io/f/xkndoovl" method="POST" onsubmit="return validateForm()">
+    <form method="POST" onsubmit="return validateForm()">
         <div class="input-box">
             <input type="text" placeholder="Full Name" id="fullName" required>
             <input type="tel" placeholder="Phone Number" id="phoneNumber" pattern="[0-9]{10}" required>
@@ -306,10 +314,13 @@
         </div>
         <br>
         <textarea name="message" id="message" cols="30" rows="10" placeholder="Your Message" required></textarea>
-        <button type="submit" class="btn">Send Message</button>
+        <button type="button" onclick="sendMail()" class="btn">Send Message</button>
     </form>
 
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
+        emailjs.init("6NiPt78fOH83-6DKU"); // Replace YOUR_USER_ID with your actual user ID from EmailJS
+
         function validateForm() {
             var fullName = document.getElementById('fullName').value;
             var phoneNumber = document.getElementById('phoneNumber').value;
@@ -344,8 +355,28 @@
 
             return true;
         }
+
+        function sendMail() {
+            var params = {
+                from_name: document.getElementById("fullName").value,
+                email_subject: document.getElementById("emailSubject").value,
+                message: document.getElementById("message").value,
+                phone_number: document.getElementById("phoneNumber").value
+            };
+
+            emailjs.send("service_60n6x2q", "template_3ng8hc2", params)
+                .then(function (res) {
+                    alert("Success! " + res.status);
+                })
+                .catch(function (err) {
+                    console.error("Error:", err);
+                    alert("Error!");
+                });
+        }
     </script>
+
 </section>
+
 
        
 <!-- scroll reveal------------------ -->
@@ -459,19 +490,6 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// email.js
-//      type="text/javascript">
-//    (function(){
-//       emailjs.init("3gxO389M130AiZ9rs");
-//    })();
-// email.js
-
-
-
-
-
-
-
    //-- scroll reveal------------------ -->
 ScrollReveal({ 
     reset: true,
@@ -542,28 +560,6 @@ function openWindow(url) {
 
 </script>
 
-<script>
-    // --------send emailJS
-
-function sendMail() {
-    var params = {
-        from_name: document.getElementById("fullName").ariaValueMax,
-        email_subject: document.getElementById("emailSubject").value,
-        message: document.getElementById("message").value,
-        phone_number: document.getElementById("phoneNumber").value
-    }
-
-    email.send("service_vknesoz, template_a9vmwra", params).then(function (res) {
-        alert("Success!" + res.status);
-    })
-
-        .catch(function (err) {
-            console.log(err);
-            alert("Error!");
-        });
-}
-</script>
-
 
 <!-- -----------------------------------play SFX ------------------->
 <script>
@@ -595,6 +591,28 @@ window.addEventListener("load", function() {
     }, 2000); // Adjust the delay time (in milliseconds) as needed
 });
 </script>
+
+
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    const navbar = document.querySelector(".navbar");
+    const barIcon = document.querySelector(".bar");
+
+    // Function to toggle navbar visibility
+    function toggleNavbar() {
+        navbar.classList.toggle("active");
+    }
+
+    // Event listener for clicking the bar icon
+    barIcon.addEventListener("click", function () {
+        toggleNavbar();
+    });
+});
+
+</script>
+
+
 
 
     

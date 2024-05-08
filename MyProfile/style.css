@@ -1231,6 +1231,87 @@ input[type="checkbox"]:checked~.navbar {
     }
 }
 
+@media(max-width: 414px) and (max-height: 986px) {
+    /* Add your responsive styles here */
+    .header {
+        padding: 1rem 3%;
+    }
+
+    .home-content h3 {
+        font-size: 2rem;
+        height: 100%;
+    }
+
+    .home-content h1 {
+        font-size: 4rem;
+    }
+
+    .home-img {
+        width: 90vw;
+        margin-top: 3rem;
+    }
+
+    .about-img img {
+        width: 50vw;
+        height: 50vw;
+        margin-top: 4rem;
+        display: none;
+    }
+
+    .footer {
+        padding: 1rem 3%;
+    }
+
+    .footer-iconTop a {
+        padding: 1rem;
+    }
+
+    .navbar {
+        width: 22%;
+        background-color: rgba(28, 65, 69, 0.822);
+    }
+
+    /* .navbar a {
+        font-size: 1.6rem;
+        margin: 2rem 0;
+    } */
+
+    .portfolio-container {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .about {
+        flex-direction: column;
+        margin-bottom: -23px;
+
+
+        .about h2 {
+            margin-bottom: 2rem;
+        }
+
+        .heading {
+            margin-right: -0%;
+            margin-top: 10%;
+            margin-left: 25%;
+        }
+
+        .about-content {
+            margin-top: -250%;
+            margin-left: 5%;
+        }
+
+        .icons-container {
+            margin-top: 5%;
+        }
+
+        .icons-container i {
+            font-size: 25px;
+        }
+    }
+}
+
+
 
 /* -----cue spiner----------------------------- */
 

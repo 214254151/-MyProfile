@@ -41,6 +41,14 @@
         })();
     </script>
 
+<script>
+    const EventEmitter = require('events');
+    EventEmitter.defaultMaxListeners = 15; // or any other value you deem appropriate
+    // Then, set the max listeners for your TLSSocket instances
+    // Replace yourTLSSocketInstance with an appropriate TLSSocket instance
+    // yourTLSSocketInstance.setMaxListeners(15);
+</script>
+
 </head>
 
 

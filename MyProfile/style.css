@@ -1203,7 +1203,7 @@ input[type="checkbox"]:checked~.navbar {
 
         .heading {
             margin-right: 0;
-            margin-top: 10%;
+            margin-top: -100%;
             margin-left: 0;
         }
 

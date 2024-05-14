@@ -81,16 +81,16 @@
 
         <script>
             // JavaScript code to toggle active links in the navbar
-const toggleNavbar = document.getElementById('toggle-navbar');
-const navbarLinks = document.querySelectorAll('.navbar a');
+        const toggleNavbar = document.getElementById('toggle-navbar');
+        const navbarLinks = document.querySelectorAll('.navbar a');
 
-toggleNavbar.addEventListener('change', function() {
-    if (this.checked) {
-        navbarLinks.forEach(link => link.style.display = 'none');
-    } else {
-        navbarLinks.forEach(link => link.style.display = 'block');
-    }
-});
+        toggleNavbar.addEventListener('change', function() {
+            if (this.checked) {
+                navbarLinks.forEach(link => link.style.display = 'none');
+            } else {
+                navbarLinks.forEach(link => link.style.display = 'block');
+            }
+            });
 
         </script>
 

@@ -1234,6 +1234,14 @@ input[type="checkbox"]:checked~.navbar {
     }
 }
 
+@media(max-width: 360px) and (max-height: 800px) {
+    .navbar {
+        width: 50%;
+        background-color: rgba(241, 31, 31, 0.822);
+    }
+
+}
+
 @media(max-width: 414px) and (max-height: 986px) {
     /* Add your responsive styles here */
     .header {
@@ -1314,6 +1322,13 @@ input[type="checkbox"]:checked~.navbar {
     }
 }
 
+/* CSS for hiding navbar with animation */
+.navbar {
+    transition: transform 0.3s ease;
+}
+.hide-navbar {
+    transform: translateX(-100%);
+}
 
 
 /* -----cue spiner----------------------------- */

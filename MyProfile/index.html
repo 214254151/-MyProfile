@@ -64,22 +64,31 @@
         </nav>
 
         
-        <label class="bar" for="check">
-            <input type="checkbox" id="check">
+        <input type="checkbox" id="toggle-navbar">
+        <label for="toggle-navbar" class="bar">
             <span class="top"></span>
             <span class="middle"></span>
-            <span class="bottom"></span> 
+            <span class="bottom"></span>
         </label>
+
+        <script>
+            // JavaScript code to toggle active links in the navbar
+const toggleNavbar = document.getElementById('toggle-navbar');
+const navbarLinks = document.querySelectorAll('.navbar a');
+
+toggleNavbar.addEventListener('change', function() {
+    if (this.checked) {
+        navbarLinks.forEach(link => link.style.display = 'none');
+    } else {
+        navbarLinks.forEach(link => link.style.display = 'block');
+    }
+});
+
+        </script>
 
     </header>
 
     <!-------- Home screen desgin --------------->
-    
-    <div class="bar" id="menu-icon">
-        <!-- Your bar icon here -->
-        <button onclick="toggleNavbar()">Toggle Navbar</button>
-    </div>
-
     
     <!-- ----------- -->
 
@@ -206,6 +215,7 @@
                           ensure seamless website performance across devices and browsers.</h4></p>
                 </div>
             </div>
+
             
     <script>
         function toggleInfo(event) {

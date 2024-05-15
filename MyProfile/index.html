@@ -339,44 +339,45 @@
 
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
     <script>
-        emailjs.init("6NiPt78fOH83-6DKU"); // Replace YOUR_USER_ID with your actual user ID from EmailJS
+        emailjs.init("6NiPt78fOH83-6DKU"); //user ID from EmailJS
 
         function validateForm() {
-            var fullName = document.getElementById('fullName').value;
-            var phoneNumber = document.getElementById('phoneNumber').value;
-            var emailAddress = document.getElementById('emailAddress').value;
-            var emailSubject = document.getElementById('emailSubject').value;
-            var message = document.getElementById('message').value;
-            
-            // Regular expressions for validations
-            var nameRegex = /^[a-zA-Z\s]+$/;
-            var phoneRegex = /^\d{10}$/;
-            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        var fullName = document.getElementById('fullName').value;
+        var phoneNumber = document.getElementById('phoneNumber').value;
+        var emailAddress = document.getElementById('emailAddress').value;
+        var emailSubject = document.getElementById('emailSubject').value;
+        var message = document.getElementById('message').value;
 
-            if (!nameRegex.test(fullName)) {
-                alert('Please enter a valid name.');
-                return false;
-            }
+        // Regular expressions for validations
+        var nameRegex = /^[a-zA-Z\s]+$/;
+        var phoneRegex = /^\d{10}$/;
+        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-            if (!phoneRegex.test(phoneNumber)) {
-                alert('Please enter a valid phone number (10 digits only).');
-                return false;
-            }
-
-            if (!emailRegex.test(emailAddress)) {
-                alert('Please enter a valid email address.');
-                return false;
-            }
-
-            if (message.trim() === '') {
-                alert('Please enter a message.');
-                return false;
-            }
-
-            return true;
+        if (!nameRegex.test(fullName)) {
+            alert('Please enter a valid name.');
+            return false;
         }
 
-        function sendMail() {
+        if (!phoneRegex.test(phoneNumber)) {
+            alert('Please enter a valid phone number (10 digits only).');
+            return false;
+        }
+
+        if (!emailRegex.test(emailAddress)) {
+            alert('Please enter a valid email address.');
+            return false;
+        }
+
+        if (message.trim() === '') {
+            alert('Please enter a message.');
+            return false;
+        }
+
+        return true;
+    }
+
+    function sendMail() {
+        if (validateForm()) {
             var params = {
                 from_name: document.getElementById("fullName").value,
                 email_subject: document.getElementById("emailSubject").value,
@@ -393,6 +394,7 @@
                     alert("Error!");
                 });
         }
+    }
     </script>
 
 </section>

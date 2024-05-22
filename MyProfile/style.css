@@ -778,6 +778,13 @@ audio
 .project-box:hover.project-box::after{
     bottom: 0;
 }
+.project-box:hover.project-box i,
+.project-box:hover.project-box>h3,
+.project-box:hover.project-box>label{
+    color: var(--text-color);
+    z-index: 2;
+}
+
 /* .portfolio {
     background: var(--second-bg-color);
 }

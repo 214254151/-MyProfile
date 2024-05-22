@@ -737,7 +737,7 @@ audio
     display: flex;
     width: 100%;
     justify-content: space-between;
-    gap: 20px;
+    gap: 70px;
     flex-wrap: wrap ;
 }
 .project-box{
@@ -751,7 +751,6 @@ audio
     background: var(--bg-color);
     border-radius: 20px;
     box-shadow: 0px 0px 20px 5px var(--second-bg-color);
-  
     overflow: hidden;
 }
 

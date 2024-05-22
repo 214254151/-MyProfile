@@ -738,7 +738,7 @@ audio
     width: 100%;
     justify-content: space-between;
     gap: 70px;
-    flex-wrap: wrap ;
+    flex-wrap:wrap ;
 }
 .project-box{
     position: relative;

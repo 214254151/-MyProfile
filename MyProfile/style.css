@@ -733,7 +733,7 @@ audio
 /* ------------------Services design------------------------- */
 /*--------------------- Portfolio design--------------------- */
 
-.project-container{
+.projects-container{
     display: flex;
     width: 100%;
     justify-content: space-between;
@@ -784,6 +784,7 @@ audio
     color: var(--text-color);
     z-index: 2;
 }
+
 
 /* .portfolio {
     background: var(--second-bg-color);

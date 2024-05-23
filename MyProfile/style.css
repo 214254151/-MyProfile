@@ -733,6 +733,10 @@ audio
 /* ------------------Services design------------------------- */
 /*--------------------- Portfolio design--------------------- */
 
+.projects{
+    margin-top: 20px;
+}
+
 .projects-container{
     display: flex;
     width: 100%;
@@ -740,6 +744,21 @@ audio
     gap: 40px;
     flex-wrap:wrap ;
 }
+
+.top-header{ 
+     h1{
+        font-size: 60px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-top: -15%;
+
+        span{
+            color: #00eaff;
+        }
+    }
+}
+
 .project-box{
     position: relative;
     display: flex;
@@ -752,12 +771,14 @@ audio
     border-radius: 20px;
     box-shadow: 0px 0px 20px 5px var(--second-bg-color);
     overflow: hidden;
+    margin-top: 20px;
 }
 
 .project-box>i{
     font-size: 50px;
     color: #0ef;
     margin-bottom: 25px;
+    margin-top: 150px;
 }
 
 .project-box label{
@@ -766,7 +787,7 @@ audio
 }
 
 .project-box::after{
-    content: "";
+    content: "Information about the hovered project";
     position: absolute;
     background: #00eaff;
     bottom: -100%;
@@ -1046,6 +1067,7 @@ input[type="checkbox"]:checked~.navbar {
     /* Hide when checkbox is checked */
 }
 
+
 /* -------------------------------------------------------------- */
 @media(max-width: 768px) {
     .navbar {
@@ -1142,7 +1164,7 @@ input[type="checkbox"]:checked~.navbar {
         margin-bottom: 3rem;
     }
 
-    .portfolio-container {
+    .projects-container {
         grid-template-columns: repeat(2, 1fr);
     }
 
@@ -1150,7 +1172,7 @@ input[type="checkbox"]:checked~.navbar {
 
 /* -------------------------------------------------------------- */
 @media(max-width: 617px) {
-    .portfolio-container {
+    .projects-container {
         grid-template-columns: 1fr;
     }
 }
